@@ -1,0 +1,11 @@
+BOT_NAME = 'logo'
+
+SPIDER_MODULES = ['logo.spiders']
+NEWSPIDER_MODULE = 'logo.spiders'
+
+ITEM_PIPELINES={
+    # 'sucai.pipelines.SucaiPipeline':1
+    'Logo.pipelines.JsonWithEncodingPipeline':2,
+    'Logo.pipelines.DownloadImagesPipeline':1
+}
+IMAGES_STORE='F:\Logo\picture'
